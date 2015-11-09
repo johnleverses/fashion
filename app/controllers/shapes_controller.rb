@@ -6,4 +6,15 @@ class ShapesController < ApplicationController
   	def new
   		@shape = Shape.new
   	end
+
+  	def create
+  		Shape.create(shape_params)
+  		redirect_to root_path
+  	end
+
+  	private
+
+  	def shape_params
+  		params.require(:shape).permit(:saying, :author)
+  	end
 end
