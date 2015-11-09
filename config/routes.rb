@@ -1,5 +1,7 @@
 Fashion::Application.routes.draw do
   root 'shapes#index'
+
+  resources :shapes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
